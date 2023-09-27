@@ -24,4 +24,5 @@ main()
 {
 	rectangle r1;
 	cout<<r1.area();
+	
 }
