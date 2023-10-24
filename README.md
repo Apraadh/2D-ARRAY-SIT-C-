@@ -5,7 +5,7 @@ labels: C++
 
 ---
 
-## Describe the bug
+## Description
 A collection of C++ programs from basic to advanced including an end semester mini project, all covered in the CPPDS Lab for sem 3
 
 
