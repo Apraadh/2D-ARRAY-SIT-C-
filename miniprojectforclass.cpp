@@ -41,9 +41,6 @@ bool isInArray(const string& item, const string* arr, int size) {
 }
 
 int main() {
-    string sports_menu[] = {"soccer ball", "basketball", "tennis racket", "baseball", "volleyball", "hockey stick", "badminton racket", "running shoes", "yoga mat", "swimsuit"};
-    string food_menu[] = {"cereal", "canned soup", "pasta", "rice", "noodles", "spices", "pickle", "curry mix", "papad", "frozen paratha"};
-    string stationary_menu[] = {"pencil", "pen", "notebook", "eraser", "stapler", "scissors", "ruler", "tape", "clips", "highlighter"};
     MyStack foodStack;
     MyStack stationeryStack;
     MyStack sportsStack;
@@ -66,17 +63,21 @@ int main() {
             item[i] = tolower(item[i]);
         }
 
-        if (isInArray(item, food_menu, 10)) {
+        cout << "Select a category for the item (food, stationary, sports): ";
+        string category;
+        cin >> category;
+        
+        if (category == "food") {
             foodStack.push(item);
-            cout<<"Item added !"<<endl;
-        } else if (isInArray(item, stationary_menu, 10)) {
+            cout << "Item added to the Food category!" << endl;
+        } else if (category == "stationary") {
             stationeryStack.push(item);
-            cout<<"Item added !"<<endl;
-        } else if (isInArray(item, sports_menu, 10)) {
+            cout << "Item added to the Stationery category!" << endl;
+        } else if (category == "sports") {
             sportsStack.push(item);
-            cout<<"Item added !"<<endl;
+            cout << "Item added to the Sports category!" << endl;
         } else {
-            cout << "Item category not recognized: " << item << endl;
+            cout << "Category not recognized: " << category << endl;
         }
 
         cout << "Do you want to enter another item? (y/n): ";
